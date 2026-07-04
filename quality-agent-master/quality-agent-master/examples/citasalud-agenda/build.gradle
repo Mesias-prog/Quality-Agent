@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.2'
+    id 'io.spring.dependency-management' version '1.1.6'   // <- dependency management Gradle
+    id 'jacoco'
+}
+
+group = 'ec.citasalud'
+version = '1.1.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport          // la cobertura se genera tras las pruebas
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = true               // el auditor lee este XML
+        html.required = true
+    }
+}

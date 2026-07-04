@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<title>Reporte de calidad · citasalud-agenda</title>
+<style>
+ body{margin:0;background:#F3F4F1;color:#0E1A26;font:16px/1.55 -apple-system,Segoe UI,Roboto,sans-serif;padding:40px}
+ .wrap{max-width:880px;margin:0 auto}
+ h1{font-size:30px;margin:0 0 4px;letter-spacing:-.02em}
+ .eyebrow{font:700 12px/1 IBM Plex Mono,monospace;color:#9E1B2E;letter-spacing:.12em;text-transform:uppercase}
+ .verdict{display:inline-block;background:#B3402F;color:#fff;font:800 20px/1 IBM Plex Mono,monospace;padding:12px 22px;border-radius:10px;margin:14px 0 28px}
+ .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
+ .card{border:1px solid #d7dad5;border-radius:12px;padding:16px;background:#fbfcfa}
+ .card h3{margin:0 0 8px;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:#46535f}
+ .big{font-size:22px;font-weight:800;margin-top:6px}
+ table{width:100%;border-collapse:collapse;margin:10px 0 26px;font-size:14px}
+ th{text-align:left;font:700 11px/1 IBM Plex Mono,monospace;letter-spacing:.08em;text-transform:uppercase;color:#46535f;border-bottom:2px solid #9E1B2E;padding:8px 10px}
+ td{padding:9px 10px;border-bottom:1px solid #e6e8e4;vertical-align:top}
+ h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8F6A1C;margin:24px 0 6px}
+ .meta{color:#5a6b78;font:13px/1.5 IBM Plex Mono,monospace}
+</style></head><body><div class="wrap">
+ <div class="eyebrow">Quality &amp; Governance Agent · Unidad 3</div>
+ <h1>Reporte de calidad — citasalud-agenda <span class="meta">v1.1.0</span></h1>
+ <div class="meta">commit a1b2c3d · 2026-06-27 · umbral cobertura 80%</div>
+ <div class="verdict">BLOQUEADO</div>
+ <div class="pillars">
+   <div class="card"><h3>Pruebas <span style="background:#B3402F;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">FALLA</span></h3>
+     <div class="big">128/130</div>
+     <div class="meta">cobertura 79.0%</div></div>
+   <div class="card"><h3>Seguridad <span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></h3>
+     <div class="big">0 críticas</div>
+     <div class="meta">1 high · 0 secretos</div></div>
+   <div class="card"><h3>Criterios <span style="background:#B3402F;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">FALLA</span></h3>
+     <div class="big">4/5</div>
+     <div class="meta">criterios que cumplen</div></div>
+ </div>
+ <h2>Criterios de aceptación</h2>
+ <table><thead><tr><th>Criterio</th><th>Estado</th><th>Evidencia</th></tr></thead><tbody><tr><td style="font-family:IBM Plex Mono,monospace">FR-001</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaFranjaLibre_ok PASA</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-002</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaOtraFranja_ok PASA</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-003</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaFranjaOcupada_secuencial_rechaza PASA</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-005</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>ReservaController devuelve 409 CONFLICT ante FranjaOcupadaException</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-006</td><td><span style="background:#B3402F;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">FALLA</span></td><td>no existe prueba para el caso concurrente; reservar() no controla concurrencia (AgendaService.java:24)</td></tr></tbody></table>
+ <h2>Hallazgos de seguridad (Semgrep MCP)</h2>
+ <table><thead><tr><th>Severidad</th><th>Ubicación</th><th>Nota</th></tr></thead><tbody><tr><td>high</td><td style="font-family:IBM Plex Mono,monospace">AgendaService.java:24</td><td>acceso concurrente no sincronizado a 'reservas'; se reporta para triage (no bloquea por ser 'high')</td></tr></tbody></table>
+ <div class="meta">Generado por build-report.py · misma regla del gate · "el gate manda, no el modelo".</div>
+</div></body></html>

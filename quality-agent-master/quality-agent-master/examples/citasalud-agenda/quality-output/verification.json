@@ -1,0 +1,28 @@
+{
+  "proyecto": "citasalud-agenda",
+  "version": "1.1.0",
+  "fecha": "2026-06-27",
+  "commit": "a1b2c3d",
+  "spec": "specs/001-agenda-citas/spec.md",
+  "tests": {
+    "comando": "./gradlew test jacocoTestReport",
+    "passed": 129,
+    "total": 129,
+    "coverage": 85.0,
+    "coverage_fuente": "build/reports/jacoco/test/jacocoTestReport.xml"
+  },
+  "security": {
+    "fuente": "Semgrep MCP (semgrep_scan) + grep de secretos",
+    "critical": 0,
+    "high": 0,
+    "secrets": 0,
+    "hallazgos": []
+  },
+  "criteria": [
+    { "id": "FR-001", "fuente": "spec.md · FR-001 / User Story 1", "status": "cumple", "evidencia": "prueba reservaFranjaLibre_ok PASA" },
+    { "id": "FR-002", "fuente": "spec.md · FR-002", "status": "cumple", "evidencia": "prueba reservaOtraFranja_ok PASA" },
+    { "id": "FR-003", "fuente": "spec.md · FR-003 / User Story 2, escenario 1", "status": "cumple", "evidencia": "prueba reservaFranjaOcupada_secuencial_rechaza PASA" },
+    { "id": "FR-005", "fuente": "spec.md · FR-005", "status": "cumple", "evidencia": "ReservaController devuelve 409 CONFLICT ante FranjaOcupadaException" },
+    { "id": "FR-006", "fuente": "spec.md · FR-006 / User Story 2, escenario 2 (concurrencia)", "status": "cumple", "evidencia": "prueba reservaFranjaOcupada_concurrente_rechaza PASA; concurrencia manejada con synchronized" }
+  ]
+}
