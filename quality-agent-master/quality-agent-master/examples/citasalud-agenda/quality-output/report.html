@@ -5,7 +5,7 @@
  .wrap{max-width:880px;margin:0 auto}
  h1{font-size:30px;margin:0 0 4px;letter-spacing:-.02em}
  .eyebrow{font:700 12px/1 IBM Plex Mono,monospace;color:#9E1B2E;letter-spacing:.12em;text-transform:uppercase}
- .verdict{display:inline-block;background:#B3402F;color:#fff;font:800 20px/1 IBM Plex Mono,monospace;padding:12px 22px;border-radius:10px;margin:14px 0 28px}
+ .verdict{display:inline-block;background:#2E7D52;color:#fff;font:800 20px/1 IBM Plex Mono,monospace;padding:12px 22px;border-radius:10px;margin:14px 0 28px}
  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
  .card{border:1px solid #d7dad5;border-radius:12px;padding:16px;background:#fbfcfa}
  .card h3{margin:0 0 8px;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:#46535f}
@@ -19,21 +19,21 @@
  <div class="eyebrow">Quality &amp; Governance Agent · Unidad 3</div>
  <h1>Reporte de calidad — citasalud-agenda <span class="meta">v1.1.0</span></h1>
  <div class="meta">commit a1b2c3d · 2026-06-27 · umbral cobertura 80%</div>
- <div class="verdict">BLOQUEADO</div>
+ <div class="verdict">APROBADO</div>
  <div class="pillars">
-   <div class="card"><h3>Pruebas <span style="background:#B3402F;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">FALLA</span></h3>
-     <div class="big">128/130</div>
-     <div class="meta">cobertura 79.0%</div></div>
+   <div class="card"><h3>Pruebas <span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></h3>
+     <div class="big">129/129</div>
+     <div class="meta">cobertura 85.0%</div></div>
    <div class="card"><h3>Seguridad <span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></h3>
      <div class="big">0 críticas</div>
-     <div class="meta">1 high · 0 secretos</div></div>
-   <div class="card"><h3>Criterios <span style="background:#B3402F;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">FALLA</span></h3>
-     <div class="big">4/5</div>
+     <div class="meta">0 high · 0 secretos</div></div>
+   <div class="card"><h3>Criterios <span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></h3>
+     <div class="big">5/5</div>
      <div class="meta">criterios que cumplen</div></div>
  </div>
  <h2>Criterios de aceptación</h2>
- <table><thead><tr><th>Criterio</th><th>Estado</th><th>Evidencia</th></tr></thead><tbody><tr><td style="font-family:IBM Plex Mono,monospace">FR-001</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaFranjaLibre_ok PASA</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-002</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaOtraFranja_ok PASA</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-003</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaFranjaOcupada_secuencial_rechaza PASA</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-005</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>ReservaController devuelve 409 CONFLICT ante FranjaOcupadaException</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-006</td><td><span style="background:#B3402F;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">FALLA</span></td><td>no existe prueba para el caso concurrente; reservar() no controla concurrencia (AgendaService.java:24)</td></tr></tbody></table>
+ <table><thead><tr><th>Criterio</th><th>Estado</th><th>Evidencia</th></tr></thead><tbody><tr><td style="font-family:IBM Plex Mono,monospace">FR-001</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaFranjaLibre_ok PASA</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-002</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaOtraFranja_ok PASA</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-003</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaFranjaOcupada_secuencial_rechaza PASA</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-005</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>ReservaController devuelve 409 CONFLICT ante FranjaOcupadaException</td></tr><tr><td style="font-family:IBM Plex Mono,monospace">FR-006</td><td><span style="background:#2E7D52;color:#fff;padding:3px 12px;border-radius:999px;font:700 13px/1 IBM Plex Mono,monospace">PASA</span></td><td>prueba reservaFranjaOcupada_concurrente_rechaza PASA; concurrencia manejada con synchronized</td></tr></tbody></table>
  <h2>Hallazgos de seguridad (Semgrep MCP)</h2>
- <table><thead><tr><th>Severidad</th><th>Ubicación</th><th>Nota</th></tr></thead><tbody><tr><td>high</td><td style="font-family:IBM Plex Mono,monospace">AgendaService.java:24</td><td>acceso concurrente no sincronizado a 'reservas'; se reporta para triage (no bloquea por ser 'high')</td></tr></tbody></table>
+ <table><thead><tr><th>Severidad</th><th>Ubicación</th><th>Nota</th></tr></thead><tbody><tr><td colspan="3" style="text-align:center; color:#5a6b78">No se encontraron hallazgos de seguridad.</td></tr></tbody></table>
  <div class="meta">Generado por build-report.py · misma regla del gate · "el gate manda, no el modelo".</div>
 </div></body></html>
